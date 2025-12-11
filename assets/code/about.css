@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "ABCMonumentGrotesk-Regular-Trial";
+    src: url("../fonts/ABCMonumentGrotesk-Regular-Trial.otf");
+}
+
+@font-face {
+    font-family: "Self-portrait";
+    src: url("../fonts/Self-portraitVF.ttf");
+}
+
+
+/* alalala */
+* {
+
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "ABCMonumentGrotesk-Regular-Trial", sans-serif;
+}
+
+
+/* NAVBAR */
+
+.nav {
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: black;
+    z-index: 5;
+}
+
+.nav-title {
+    color: #fff;
+    font-size: 120%;
+    text-decoration: none;
+}
+.nav-title:hover { 
+    color: #000; }
+
+
+.nav-links { 
+    display: flex; 
+    gap: 10px; 
+}
+
+.nav-link {
+    background: #000;
+    color: #fff;
+    border: 2px solid #ccf244;
+    border-radius: 30px;
+    padding: 10px 20px 5px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.nav-link:hover {
+    background: #fff; 
+    color: #000;
+    border-radius: 50%;
+    transition: 0.5s;
+}

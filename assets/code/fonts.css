@@ -1,0 +1,177 @@
+@font-face {
+    font-family: "ABCMonumentGrotesk-Regular-Trial";
+    src: url("../fonts/ABCMonumentGrotesk-Regular-Trial.otf");
+}
+
+@font-face {
+	font-family: "Crimson Veil";
+	src: url("../fonts/CrimsonVeilVF.ttf");
+}
+
+@font-face {
+	font-family: "Connected Slab";
+	src: url("../fonts/ConnectedSlabVF.ttf");
+}
+
+@font-face {
+	font-family: "Cirkit";
+	src: url("../fonts/CirkitVF.ttf");
+}
+
+/* alalala */
+* {
+
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "ABCMonumentGrotesk-Regular-Trial", sans-serif;
+}
+
+
+/* NAVBAR */
+
+.nav {
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: black;
+    z-index: 5;
+}
+
+.nav-title {
+    color: #fff;
+    font-size: 120%;
+    text-decoration: none;
+}
+.nav-title:hover { 
+    color: #000; }
+
+
+.nav-links { 
+    display: flex; 
+    gap: 10px; 
+}
+
+.nav-link {
+    background: #000;
+    color: #fff;
+    border: 2px solid #ccf244;
+    border-radius: 30px;
+    padding: 10px 20px 5px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.nav-link:hover {
+    background: #fff; 
+    color: #000;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+
+/* SECTION CIRKIT */
+
+.section-cirkit {
+	background-color: #ccf244;
+	color: black;
+	
+}
+
+.section-cirkit-text {
+	font-family: "Cirkit";
+	font-size: min(30vw, 300px);
+	padding: 100px 20px;
+	text-align: center;
+	transition: font-variation-settings .5s;
+	font-variation-settings: "CIRC" 0, "LONG" 0;
+}
+
+.section-cirkit-text:hover {
+	font-variation-settings: "CIRC" 100, "LONG" 100;
+}
+
+.section-cirkit-desc {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: min(30vw, 300px);
+}
+
+/* SECTION CRIMSON VEIL */
+
+.section-crimson-veil {
+	background-color: #978EEB;
+	color: black;
+	
+}
+
+.section-crimson-veil-text {
+	font-family: "Crimson Veil";
+	font-size: min(15vw, 200px);
+	letter-spacing: -0.1em;
+	text-align: center;
+	font-variation-settings: "SHAP" 0, "POSI" 0;
+	transition: font-variation-settings .5s;
+	padding: 100px 20px;
+}
+
+.section-crimson-veil-text:hover {
+	font-variation-settings: "SHAP" 100, "POSI" 100;
+}
+
+
+.section-connected-slab {
+	background-color: #0037ff;
+	color: black;
+	
+}
+
+.section-connected-slab-text {
+	font-family: "Connected Slab";
+	font-size: min(15vw, 200px);
+	text-align: center;
+	font-variation-settings: "wght" 0;
+	transition: font-variation-settings .5s;
+	padding: 100px 20px;
+
+}
+
+.section-connected-slab-text:hover {
+	font-variation-settings: "wght" 100;
+}
+/* SECTION LINKS */
+
+.section-links {
+	display: flex;
+	justify-content: end;
+	gap: 20px;
+	padding: 20px;
+}
+
+.section-links-button {
+	text-decoration: none;
+	font-family: "AUTHENTIC REMIXED", sans-serif;
+	background-color: black;
+	color: azure;
+	border: black 1px solid;
+	border-radius: 30px;
+	text-align: center;
+	padding: 10px 20px 5px;
+	font-size: 100%;
+	border-style: solid;
+	border-color: rgb(0, 0, 0);
+	border-width: 2px;
+	letter-spacing: 1px;
+}
+
+.section-links-button:hover {
+	background-color: #978EEB;
+	border-color: aliceblue;
+}
