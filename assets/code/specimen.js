@@ -1,6 +1,4 @@
-/* -----------------------------------
-   GLOBAL VARIABLES
------------------------------------- */
+
 let fontSize = 110;
 let letterSpacing = 0;
 let circle = 0;
@@ -9,9 +7,7 @@ let lineHeight = 1;
 
 const root = document.documentElement;
 
-/* -----------------------------------
-   FONT SIZE SLIDER
------------------------------------- */
+
 function setFontSize(newFontSize) {
     fontSize = newFontSize;
 
@@ -21,9 +17,7 @@ function setFontSize(newFontSize) {
     document.querySelector("#current-font-size").innerText = newFontSize;
 }
 
-/* -----------------------------------
-   LETTER SPACING SLIDER
------------------------------------- */
+
 function setLetterSpacing(newSpacing) {
     letterSpacing = newSpacing;
 
@@ -33,9 +27,7 @@ function setLetterSpacing(newSpacing) {
     document.querySelector("#current-letter-spacing").innerText = newSpacing;
 }
 
-/* -----------------------------------
-   VARIABLE FONT AXES
------------------------------------- */
+
 function changeCircle(newValue) {
     circle = newValue;
     applySettings();
@@ -51,9 +43,7 @@ function changeLineHeight(newValue) {
     applySettings();
 }
 
-/* -----------------------------------
-   APPLY SETTINGS TO TEXT + TESTER
------------------------------------- */
+
 function applySettings() {
     let text = document.querySelector("#text");
     let tester = document.querySelector("#tester");
@@ -65,7 +55,7 @@ function applySettings() {
     tester.style.lineHeight = lineHeight;
 }
 
-/*CHARACTER TESTER*/
+
 function changeLetter(newLetter) {
     document.querySelector("#tester").textContent = newLetter;
 }

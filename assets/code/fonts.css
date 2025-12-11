@@ -18,7 +18,7 @@
 	src: url("../fonts/CirkitVF.ttf");
 }
 
-/* alalala */
+/* --------------------- */
 * {
 
 	box-sizing: border-box;
@@ -49,11 +49,12 @@ body {
 
 .nav-title {
     color: #fff;
-    font-size: 120%;
+    font-size: 130%;
     text-decoration: none;
 }
 .nav-title:hover { 
-    color: #000; }
+    color: #ccf244;
+}
 
 
 .nav-links { 
@@ -72,12 +73,10 @@ body {
 }
 .nav-link:hover {
     background: #fff; 
-    color: #000;
+    color: #000000;
     border-radius: 50%;
     transition: 0.5s;
 }
-
-
 /* SECTION CIRKIT */
 
 .section-cirkit {
@@ -153,25 +152,22 @@ body {
 	justify-content: end;
 	gap: 20px;
 	padding: 20px;
+	font-size: 20px;
 }
 
 .section-links-button {
-	text-decoration: none;
-	font-family: "AUTHENTIC REMIXED", sans-serif;
-	background-color: black;
-	color: azure;
-	border: black 1px solid;
-	border-radius: 30px;
-	text-align: center;
-	padding: 10px 20px 5px;
-	font-size: 100%;
-	border-style: solid;
-	border-color: rgb(0, 0, 0);
-	border-width: 2px;
-	letter-spacing: 1px;
+	background: #000;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 20px 5px;
+    text-decoration: none;
+    letter-spacing: 1px;
 }
 
 .section-links-button:hover {
-	background-color: #978EEB;
-	border-color: aliceblue;
+    background: #fff; 
+    color: #000000;
+	border: 2px solid #000000;
+    border-radius: 50%;
+    transition: 0.5s;
 }

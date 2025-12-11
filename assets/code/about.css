@@ -9,7 +9,7 @@
 }
 
 
-/* alalala */
+/* ---------------------------- */
 * {
 
 	box-sizing: border-box;
@@ -40,12 +40,12 @@ body {
 
 .nav-title {
     color: #fff;
-    font-size: 120%;
+    font-size: 130%;
     text-decoration: none;
 }
 .nav-title:hover { 
-    color: #000; }
-
+    color: #ccf244;
+}
 
 .nav-links { 
     display: flex; 
@@ -63,7 +63,77 @@ body {
 }
 .nav-link:hover {
     background: #fff; 
-    color: #000;
+    color: #000000;
     border-radius: 50%;
     transition: 0.5s;
+}
+
+.bio-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    background: #000000;
+    color: #978EEB;
+    padding: 100px;
+    height: 100vh;
+}
+
+.portrait {
+    font-family: "Self-portrait";
+    font-size: 350px;
+    font-variation-settings: "POSI" 0;
+    animation-name: portrait-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes portrait-animation {
+
+    0%  {
+        color: #978EEB;
+        font-variation-settings: "POSI" 100;
+    }
+  25%  {
+    color: #ccf244;
+    font-variation-settings: "POSI" 0;
+}
+  50%  {
+    color: #978EEB;
+    font-variation-settings: "POSI" 100;
+}
+
+  75%  {
+    color: #ccf244;
+    font-variation-settings: "POSI" 0;
+}
+  100% {
+    color: #978EEB; 
+    font-variation-settings: "POSI" 100;}
+}
+
+.speech-bubble {
+    position: relative;
+    background: #ffffff;
+    border: 4px solid #ccf244;
+    border-radius: .4em;
+    width: 700px;
+    max-height: 400px;
+    padding: 20px 28px;
+    font-size: 20px;
+    padding: 50px;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    left: -3em;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 3em solid transparent;
+    border-right-color: #ffffff;
+    border-left: 0;
+    border-top: 0;
+    margin-top: -1.5em;
 }

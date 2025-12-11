@@ -41,11 +41,12 @@ body {
 
 .nav-title {
     color: #fff;
-    font-size: 120%;
+    font-size: 130%;
     text-decoration: none;
 }
 .nav-title:hover { 
-    color: #000; }
+    color: #ccf244;
+}
 
 
 .nav-links { 
@@ -77,7 +78,7 @@ body {
     align-items: center;
     font-family: "Cirkit";
     font-variation-settings: "CIRC" 0, "LONG" 0;
-    font-size: 300px;
+    font-size: 350px;
     letter-spacing: -0.03em;
     transition: 0.5s;
     background-color: #ccf244;
@@ -92,30 +93,69 @@ letter-spacing: -0.01em;
 #about {
     padding-top: 100px;
     padding-bottom: 100px;
-    background-color: #ccf244;;
+    background-color: #ccf244;
 }
-
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 100px;
-    max-width: 1200px;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+    margin: 0 auto; 
 }
 
 .about-left {
-    text-align: center;
-    color: #000000;
+    color: #000;
 }
 
+.about-left-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
 
+.about-left-text {
+    font-size: 18px;
+    line-height: 1.6;
+}
 
+.about-middle {
+    color: #000;
+}
+
+.about-right-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.credits {
+    margin-bottom: 30px;
+}
+
+.credits div {
+    margin-bottom: 8px;
+}
+
+.languages-title {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.supported-languages {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.about-right {
+    display: flex;
+    align-items: flex-start;
+}
 
 .download-btn {
-    margin-top: 50px;
+    margin-top: 0;
     background: #000;
     color: #ccf244;
-    border: 2px solid #000000;
+    border: 2px solid #000;
+    font-size: 25px;
     border-radius: 30px;
     padding: 10px 20px 5px;
     text-decoration: none;
@@ -123,15 +163,23 @@ letter-spacing: -0.01em;
 }
 
 .download-btn:hover {
-    background: #fff; 
+    background: #fff;
     color: #000;
     border-radius: 50%;
-    transition: 0.5s;
+    transition: 0.2s;
+    transform: rotate(-15deg);
 }
 
-
+/* RESPONSIVE */
 @media (max-width: 900px) {
-    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-right {
+        justify-content: flex-start;
+    }
 }
 
 
@@ -391,10 +439,22 @@ font-variation-settings: "CIRC" 0, "LONG" 0;}
     border-radius: 50%;
 }
 
-.corner.tl { top: -11px; left: -11px; }
-.corner.tr { top: -11px; right: -11px; }
-.corner.bl { bottom: -11px; left: -11px; }
-.corner.br { bottom: -11px; right: -11px; }
+.corner.tl { 
+    top: -11px; 
+    left: -11px; 
+}
+.corner.tr { 
+    top: -11px; 
+    right: -11px; 
+}
+.corner.bl { 
+    bottom: -11px; 
+    left: -11px; 
+}
+.corner.br { 
+    bottom: -11px; 
+    right: -11px; 
+}
 
 #tester {
     width: 50%;
@@ -493,7 +553,7 @@ font-variation-settings: "CIRC" 0, "LONG" 0;}
 }
 
 .font-in-use-track img {
-    height: 600px;
+    height: 650px;
     object-fit: cover;
     transition: transform 0.3s;
     cursor: pointer;

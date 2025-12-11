@@ -36,67 +36,81 @@ body {
 /* NAVBAR */
 
 .nav {
-	position: sticky;
-	top: 0;
-	padding: 10px;
-	display: flex;
-	align-items: baseline;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	gap: 10px;
-	background-color: rgba(0, 0, 0);;
-	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-	z-index: 5;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: black;
+    z-index: 5;
 }
 
 .nav-title {
-	color: rgb(255, 255, 255);
-	font-size: 120%;
-	text-wrap: nowrap;
-	text-decoration: none;
+    color: #fff;
+    font-size: 130%;
+    text-decoration: none;
+}
+.nav-title:hover { 
+    color: #ccf244;
 }
 
-.nav-title:hover {
-	color: #ccf244;
-}
 
-.nav-links {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
+.nav-links { 
+    display: flex; 
+    gap: 10px; 
 }
 
 .nav-link {
-	text-wrap: nowrap;
-	gap: 20px;
-	text-decoration: none;
-	background-color: black;
-	color: rgb(255, 255, 255);
-	border: black 1px solid;
-	border-radius: 30px;
-	text-align: center;
-	padding: 10px 20px 5px;
-	font-size: 90%;
-	border-style: line;
-	border-color: #ccf244;
-	border-width: 2px;
-	letter-spacing: 1px;
+    background: #000;
+    color: #fff;
+    border: 2px solid #ccf244;
+    border-radius: 30px;
+    padding: 10px 20px 5px;
+    text-decoration: none;
+    letter-spacing: 1px;
 }
-
 .nav-link:hover {
-	background-color: rgb(255, 255, 255);
-	color: rgb(0, 0, 0);
-	border-radius: 50%;
-	transition: 0.5s;
-
+    background: #fff; 
+    color: #000000;
+    border-radius: 50%;
+    transition: 0.5s;
 }
 
-.bg-title {
+.bg-title-top {
   position: fixed;
-  top: 60%;
+  top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 50vw;
+  font-size: 55vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  color: white;
+  z-index: 1;
+    animation: glitch 1.4s infinite alternate;
+}
+
+.bg-title-middle {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 55vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  color: white;
+  z-index: 2;
+  animation: glitch 1.4s infinite alternate;
+}
+
+.bg-title-bottom {
+  position: fixed;
+  top: 105%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 55vw;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 900;
   color: white;
@@ -155,7 +169,7 @@ body {
   position: fixed;
   inset: 0;
   overflow: hidden;
-  z-index: 2;
+  z-index: 3;
   mix-blend-mode: multiply;
 }
 
