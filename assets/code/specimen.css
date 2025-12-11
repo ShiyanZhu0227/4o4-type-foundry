@@ -103,20 +103,13 @@ letter-spacing: -0.01em;
     max-width: 1200px;
 }
 
-#about h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+.about-left {
+    text-align: center;
     color: #000000;
 }
 
-#about p {
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    color: #000000;
-}
 
-.credits { list-style: none; padding: 0; margin: 0 0 2rem 0; color: #000000;}
-.credits li { margin-bottom: 0.4rem; color: #000000;}
+
 
 .download-btn {
     margin-top: 50px;
