@@ -33,7 +33,6 @@ body {
 
 
 /* NAVBAR */
-
 .nav {
     position: sticky;
     top: 0;
@@ -43,19 +42,20 @@ body {
     align-items: baseline;
     flex-wrap: wrap;
     gap: 10px;
-    background-color: black;
+    background: black;
     z-index: 5;
 }
 
 .nav-title {
-    color: #fff;
+    color: #ffffff;
     font-size: 130%;
     text-decoration: none;
 }
 .nav-title:hover { 
     color: #ccf244;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
-
 
 .nav-links { 
     display: flex; 
@@ -63,32 +63,36 @@ body {
 }
 
 .nav-link {
-    background: #000;
-    color: #fff;
-    border: 2px solid #ccf244;
+	background: #000000;
+    color: #ffffff;
+    font-size: 18px;
+	border: 2px solid #ccf244;
     border-radius: 30px;
-    padding: 10px 20px 5px;
+    padding: 8px 20px;
     text-decoration: none;
     letter-spacing: 1px;
 }
 .nav-link:hover {
-    background: #fff; 
+    background: #ffffff;
     color: #000000;
+	border: 2px solid #000000;
     border-radius: 50%;
-    transition: 0.5s;
+    transition: 0.3s;
 }
+
 /* SECTION CIRKIT */
 
 .section-cirkit {
 	background-color: #ccf244;
 	color: black;
+	padding-bottom: 20px;
 	
 }
 
 .section-cirkit-text {
 	font-family: "Cirkit";
 	font-size: min(30vw, 300px);
-	padding: 100px 20px;
+	padding: 100px 20px 100px 20px;
 	text-align: center;
 	transition: font-variation-settings .5s;
 	font-variation-settings: "CIRC" 0, "LONG" 0;
@@ -106,8 +110,9 @@ body {
 /* SECTION CRIMSON VEIL */
 
 .section-crimson-veil {
-	background-color: #978EEB;
-	color: black;
+	background-color: black;
+	color: #ccf244;
+	padding-bottom: 20px;
 	
 }
 
@@ -118,7 +123,7 @@ body {
 	text-align: center;
 	font-variation-settings: "SHAP" 0, "POSI" 0;
 	transition: font-variation-settings .5s;
-	padding: 100px 20px;
+	padding: 120px 20px 80px 20px;
 }
 
 .section-crimson-veil-text:hover {
@@ -127,8 +132,9 @@ body {
 
 
 .section-connected-slab {
-	background-color: #0037ff;
+	background-color: #ccf244;
 	color: black;
+	padding-bottom: 20px;
 	
 }
 
@@ -138,13 +144,14 @@ body {
 	text-align: center;
 	font-variation-settings: "wght" 0;
 	transition: font-variation-settings .5s;
-	padding: 100px 20px;
+	padding: 120px 20px 60px 20px;
 
 }
 
 .section-connected-slab-text:hover {
 	font-variation-settings: "wght" 100;
 }
+
 /* SECTION LINKS */
 
 .section-links {
@@ -152,22 +159,23 @@ body {
 	justify-content: end;
 	gap: 20px;
 	padding: 20px;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .section-links-button {
 	background: #000;
-    color: #fff;
+    color: #ffffff;
+	border: 2px solid #ccf244;
     border-radius: 30px;
-    padding: 10px 20px 5px;
+    padding: 10px 20px;
     text-decoration: none;
     letter-spacing: 1px;
 }
 
 .section-links-button:hover {
-    background: #fff; 
+    background: #ffffff;
     color: #000000;
 	border: 2px solid #000000;
     border-radius: 50%;
-    transition: 0.5s;
+    transition: 0.3s;
 }

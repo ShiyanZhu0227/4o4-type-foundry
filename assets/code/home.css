@@ -34,7 +34,6 @@ body {
 
 
 /* NAVBAR */
-
 .nav {
     position: sticky;
     top: 0;
@@ -44,19 +43,20 @@ body {
     align-items: baseline;
     flex-wrap: wrap;
     gap: 10px;
-    background-color: black;
+    background: rgba(0, 0, 0, 0.5);
     z-index: 5;
 }
 
 .nav-title {
-    color: #fff;
+    color: #ffffff;
     font-size: 130%;
     text-decoration: none;
 }
 .nav-title:hover { 
     color: #ccf244;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
-
 
 .nav-links { 
     display: flex; 
@@ -64,19 +64,21 @@ body {
 }
 
 .nav-link {
-    background: #000;
-    color: #fff;
-    border: 2px solid #ccf244;
+	background: #000000;
+    color: #ffffff;
+    font-size: 18px;
+	border: 2px solid #ccf244;
     border-radius: 30px;
-    padding: 10px 20px 5px;
+    padding: 8px 20px;
     text-decoration: none;
     letter-spacing: 1px;
 }
 .nav-link:hover {
-    background: #fff; 
+    background: #ffffff;
     color: #000000;
+	border: 2px solid #000000;
     border-radius: 50%;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .bg-title-top {

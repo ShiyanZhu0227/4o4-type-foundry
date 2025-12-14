@@ -24,7 +24,6 @@ body {
 
 
 /* NAVBAR */
-
 .nav {
     position: sticky;
     top: 0;
@@ -34,17 +33,19 @@ body {
     align-items: baseline;
     flex-wrap: wrap;
     gap: 10px;
-    background-color: black;
+    background: black;
     z-index: 5;
 }
 
 .nav-title {
-    color: #fff;
+    color: #ffffff;
     font-size: 130%;
     text-decoration: none;
 }
 .nav-title:hover { 
     color: #ccf244;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
 
 .nav-links { 
@@ -53,87 +54,151 @@ body {
 }
 
 .nav-link {
-    background: #000;
-    color: #fff;
-    border: 2px solid #ccf244;
+	background: #000000;
+    color: #ffffff;
+    font-size: 18px;
+	border: 2px solid #ccf244;
     border-radius: 30px;
-    padding: 10px 20px 5px;
+    padding: 8px 20px;
     text-decoration: none;
     letter-spacing: 1px;
 }
 .nav-link:hover {
-    background: #fff; 
+    background: #ffffff;
     color: #000000;
+	border: 2px solid #000000;
     border-radius: 50%;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
-.bio-container{
+/* ================= BIO SECTION ================= */
+
+.bio-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     gap: 30px;
     background: #000000;
     color: #978EEB;
-    padding: 100px;
-    height: 100vh;
+    padding: 60px 120px 180px 120px;
+    min-height: 100vh;
 }
+
+/* ================= PORTRAIT ================= */
 
 .portrait {
     font-family: "Self-portrait";
-    font-size: 350px;
+    font-size: clamp(180px, 30vw, 380px);
     font-variation-settings: "POSI" 0;
+    line-height: 1;
+
     animation-name: portrait-animation;
     animation-duration: 5s;
     animation-iteration-count: infinite;
 
+    flex-shrink: 0; /* IMPORTANT: prevents bubble overlap */
 }
 
 @keyframes portrait-animation {
-
-    0%  {
+    0% {
         color: #978EEB;
         font-variation-settings: "POSI" 100;
     }
-  25%  {
-    color: #ccf244;
-    font-variation-settings: "POSI" 0;
-}
-  50%  {
-    color: #978EEB;
-    font-variation-settings: "POSI" 100;
+    25% {
+        color: #ccf244;
+        font-variation-settings: "POSI" 0;
+    }
+    50% {
+        color: #978EEB;
+        font-variation-settings: "POSI" 100;
+    }
+    75% {
+        color: #ccf244;
+        font-variation-settings: "POSI" 0;
+    }
+    100% {
+        color: #978EEB;
+        font-variation-settings: "POSI" 100;
+    }
 }
 
-  75%  {
-    color: #ccf244;
-    font-variation-settings: "POSI" 0;
-}
-  100% {
-    color: #978EEB; 
-    font-variation-settings: "POSI" 100;}
-}
+/* ================= SPEECH BUBBLE ================= */
 
 .speech-bubble {
     position: relative;
-    background: #ffffff;
-    border: 4px solid #ccf244;
-    border-radius: .4em;
-    width: 700px;
-    max-height: 400px;
-    padding: 20px 28px;
-    font-size: 20px;
-    padding: 50px;
+    background: #ccf244;
+    color: #000000;
+    border-radius: 0.4em;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: min(700px, 100%);
+    max-width: 100%;
+    padding: 80px 100px;
+    font-size: 22px;
+    line-height: 1.4;
+    display: flex;
 }
 
-.speech-bubble:after {
+.speech-bubble::after {
     content: '';
     position: absolute;
     left: -3em;
     top: 50%;
+    transform: translateY(-50%);
     width: 0;
     height: 0;
     border: 3em solid transparent;
-    border-right-color: #ffffff;
+    border-right-color: #ccf244;
     border-left: 0;
     border-top: 0;
-    margin-top: -1.5em;
+}
+
+@media (max-width: 1400px) {
+    .speech-bubble::after {
+    content: none;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .bio-container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px 40px;
+        gap: 40px;
+    }
+
+    .portrait {
+        font-size: 240px;
+    }
+
+    .speech-bubble {
+        padding: 50px 60px;
+        font-size: 20px;
+    }
+    .speech-bubble::after {
+     content: none;
+    }
+}
+
+
+
+/* PHONE */
+@media (max-width: 480px) {
+
+    .portrait {
+        font-size: 180px;
+    }
+
+    .speech-bubble {
+        padding: 36px 28px;
+        font-size: 18px;
+    }
+
+    .speech-bubble::after {
+        top: -2em;
+        border-width: 2em;
+    }
 }

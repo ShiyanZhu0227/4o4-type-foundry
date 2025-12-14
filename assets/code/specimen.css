@@ -40,14 +40,15 @@ body {
 }
 
 .nav-title {
-    color: #fff;
+    color: #ffffff;
     font-size: 130%;
     text-decoration: none;
 }
 .nav-title:hover { 
     color: #ccf244;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
-
 
 .nav-links { 
     display: flex; 
@@ -55,19 +56,21 @@ body {
 }
 
 .nav-link {
-    background: #000;
-    color: #fff;
-    border: 2px solid #ccf244;
+	background: #000000;
+    color: #ffffff;
+    font-size: 18px;
+	border: 2px solid #ccf244;
     border-radius: 30px;
-    padding: 10px 20px 5px;
+    padding: 8px 20px;
     text-decoration: none;
     letter-spacing: 1px;
 }
 .nav-link:hover {
-    background: #fff; 
-    color: #000;
+    background: #ffffff;
+    color: #000000;
+	border: 2px solid #000000;
     border-radius: 50%;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 /* BIG TITLE */
@@ -78,16 +81,19 @@ body {
     align-items: center;
     font-family: "Cirkit";
     font-variation-settings: "CIRC" 0, "LONG" 0;
-    font-size: 350px;
+    font-size: 23vw;
     letter-spacing: -0.03em;
+    padding: 5vw;
     transition: 0.5s;
     background-color: #ccf244;
+    text-align: center;
 }
 
 .title:hover {
-font-variation-settings: "CIRC" 100, "LONG" 100;
-letter-spacing: -0.01em;
+    font-variation-settings: "CIRC" 100, "LONG" 100;
+    letter-spacing: -0.01em;
 }
+
 
 /* ABOUT SECTION */
 #about {
@@ -114,7 +120,7 @@ letter-spacing: -0.01em;
 
 .about-left-text {
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 .about-middle {
@@ -157,7 +163,7 @@ letter-spacing: -0.01em;
     border: 2px solid #000;
     font-size: 25px;
     border-radius: 30px;
-    padding: 10px 20px 5px;
+    padding: 10px 20px;
     text-decoration: none;
     letter-spacing: 1px;
 }
@@ -205,7 +211,7 @@ letter-spacing: -0.01em;
 .style-preview {
     font-family: "Cirkit";
     font-variation-settings: "CIRC" 0, "LONG" 0;
-    font-size: 96px;
+    font-size: 110px;
     letter-spacing: 0px;
     line-height: 1.1;
     margin-top: 60px;
@@ -303,82 +309,190 @@ input[type="range"]::-webkit-slider-thumb {
     color: #ccf244;
 }
 
+@media (max-width: 900px) {
+
+    /* reduce space between columns / blocks */
+    .type-style-grid {
+        gap: 40px;
+    }
+
+    /* reduce top spacing per section */
+    .type-style-block {
+        padding-top: 60px;
+    }
+
+    /* tighter spacing under sliders */
+    .new-slider-area {
+        margin-bottom: 24px;
+    }
+
+    /* tighten preview spacing */
+    .style-preview {
+        margin-top: 40px;
+    }
+
+    #text {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .type-style-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .type-style-block {
+        padding-top: 40px;
+    }
+
+    .new-slider-area {
+        margin-bottom: 20px;
+        gap: 20px;
+    }
+
+    .style-preview {
+        margin-top: 32px;
+    }
+
+    #text {
+        padding-top: 32px;
+        padding-bottom: 48px;
+    }
+}
+
 
 /* ANIMATION SECTION */
 .animation-section {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: 80px;
     background-color: #ccf244;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
+
+    /* critical: prevent overflow during resize */
+    overflow: hidden;
 }
 
+/* frame */
+.animation-frame {
+    position: relative;
+    border: 3px solid #000;
+}
+
+/* corners */
+.animation-frame .corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border-radius: 50%;
+}
+
+.animation-frame .corner.tl { top: -11px; left: -11px; }
+.animation-frame .corner.tr { top: -11px; right: -11px; }
+.animation-frame .corner.bl { bottom: -11px; left: -11px; }
+.animation-frame .corner.br { bottom: -11px; right: -11px; }
+
+/* LEFT */
 .animation-section-left {
     width: 100%;
+    padding: 30px;
+
     font-family: "Cirkit";
     font-size: 100px;
     font-variation-settings: "CIRC" 0, "LONG" 0;
-    color: #000000;
-    line-height: 1.6em;
-    border-style: inset;
-    border-color: #000000;
-    padding: 30px;
+
+    background-color: #000;
+    color: #ccf244;
+    line-height: 1.6;
     text-align: center;
-    animation-name: animation-left;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+
+    animation: animation-left 4s infinite alternate;
 }
 
-@keyframes animation-left {
-  0%   {}
-  25%  {background-color: rgb(0, 0, 0);
-color: #ccf244;}
-  50%  {
-    font-variation-settings: "CIRC" 50, "LONG" 50;
-}
-  100% {background-color: #ccf244; 
-    font-variation-settings: "CIRC" 100, "LONG" 100;}
-}
-
+/* RIGHT */
 .animation-section-right {
     width: 100%;
+    padding: 30px;
+
     font-family: "Cirkit";
     font-size: 100px;
     font-variation-settings: "CIRC" 100, "LONG" 100;
-    color: #000000;
-    border-style: outset;
-    line-height: 1.6em;
-    border-color: #000000;
-    padding: 30px;
+
+    background-color: #ccf244;
+    color: #000;
+    line-height: 1.6;
     text-align: center;
-    animation-name: animation-right;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+
+    animation: animation-right 4s infinite alternate;
+}
+
+/* animations */
+@keyframes animation-left {
+    0%   { font-variation-settings: "CIRC" 0,   "LONG" 0; }
+    50%  { font-variation-settings: "CIRC" 50,  "LONG" 50; }
+    100% { font-variation-settings: "CIRC" 100, "LONG" 100; }
 }
 
 @keyframes animation-right {
-  0%   {background-color: rgb(0, 0, 0); color: #ccf244;}
-  25%  {background-color: #ccf244; color: #000000;}
-  50%  {
-font-variation-settings: "CIRC" 50, "LONG" 50;}
-  100% {background-color: rgb(0, 0, 0);
-    color: #ccf244;
-font-variation-settings: "CIRC" 0, "LONG" 0;}
+    0%   { font-variation-settings: "CIRC" 100, "LONG" 100; }
+    50%  { font-variation-settings: "CIRC" 50,  "LONG" 50; }
+    100% { font-variation-settings: "CIRC" 0,   "LONG" 0; }
 }
 
+/* ================= TABLET ================= */
 @media (max-width: 900px) {
-   .animation-section { 
-    display: flex;
-}
+
+    .animation-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 40px;
+    }
+
+    .animation-section-left {
+        font-size: 80px;
+
+    }
+    .animation-section-right {
+font-size: 80px;
+    }
 }
 
-/* CHARACTER KEYBOARD SECTION */
+
+@media (max-width: 600px) {
+
+    .animation-section {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 40px 24px;
+    }
+
+    .animation-section-left {
+        font-size: 64px;
+        line-height: 1.25;
+        padding: 24px;
+        word-break: break-word;
+        text-wrap: balance;
+    }
+
+    .animation-section-right {
+        font-size: 64px;
+        line-height: 1.25;
+        padding: 24px;
+        word-break: break-word;
+        text-wrap: balance;
+    }
+}
+
+
+/* ================= CHARACTER KEYBOARD SECTION ================= */
+
 .characters-wrapper {
     background: #000;
-    padding-top: 80px;
+    padding-top: 120px;
     padding-bottom: 120px;
 }
 
@@ -395,7 +509,8 @@ font-variation-settings: "CIRC" 0, "LONG" 0;}
     gap: 100px;
 }
 
-/* keyboard */
+/* ================= KEYBOARD ================= */
+
 .letters {
     display: grid;
     grid-template-columns: repeat(6, auto);
@@ -403,34 +518,42 @@ font-variation-settings: "CIRC" 0, "LONG" 0;}
     width: 50%;
 }
 
-.letters button {
+.letters div {
     width: 80px;
     height: 80px;
     margin: 3px;
     background: #ccf244;
     color: #000;
     font-size: 3.5rem;
-    border-radius: 5px;
     font-family: "Cirkit";
+    border-radius: 5px;
     cursor: pointer;
-}
-.letters button:hover {
-    background: #000;
-    color: #ccf244;
-    transform: translateY(-4px);
+    text-align: center;
+    line-height: 80px;
+    transition: 0.2s
 }
 
-/* Tester frame */
+
+.letters div:hover {
+    background: #000;
+    color: #ccf244;
+    transform: translateY(-2px);
+}
+
+/* ================= TESTER FRAME ================= */
+
 .tester-frame {
     position: relative;
     width: 40%;
     min-height: 560px;
     border: 3px solid #ccf244;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* frame corners */
 .corner {
     position: absolute;
     width: 20px;
@@ -439,47 +562,60 @@ font-variation-settings: "CIRC" 0, "LONG" 0;}
     border-radius: 50%;
 }
 
-.corner.tl { 
-    top: -11px; 
-    left: -11px; 
-}
-.corner.tr { 
-    top: -11px; 
-    right: -11px; 
-}
-.corner.bl { 
-    bottom: -11px; 
-    left: -11px; 
-}
-.corner.br { 
-    bottom: -11px; 
-    right: -11px; 
-}
+.corner.tl { top: -11px; left: -11px; }
+.corner.tr { top: -11px; right: -11px; }
+.corner.bl { bottom: -11px; left: -11px; }
+.corner.br { bottom: -11px; right: -11px; }
 
+/* tester letter */
 #tester {
     width: 50%;
     font-family: "Cirkit";
     font-size: 15vw;
     color: #ccf244;
+
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 900px) {
-    .letters { grid-template-columns: repeat(4, auto); width: 100%; }
-    #tester { width: 100%; margin-top: 20px; }
+    .container {
+        gap: 60px;
+    }
+    .letters {
+        grid-template-columns: repeat(4, auto);
+        width: 100%;
+    }
+    .tester-frame {
+        width: 100%;
+        min-height: 400px;
+    }
+    #tester {
+        font-size: 20vw;
+    }
 }
 
+
 @media (max-width: 600px) {
-    .letters { grid-template-columns: repeat(2, auto); width: 100%; }
-    #tester { width: 100%; margin-top: 20px; }
+    .container {
+        justify-content: center;
+    }
+    .letters {
+        grid-template-columns: repeat(4, auto);
+        width: 100%;
+        justify-content: center;
+    }
+        .tester-frame {
+        display: none;
+    }
 }
 
 
 /* EDITABLE TEXT BOX SECTION */
 .edit-box-section {
-    padding-top: 80px;
-    padding-bottom: 120px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     background-color: #ccf244;
     
 }
@@ -495,7 +631,7 @@ font-variation-settings: "CIRC" 0, "LONG" 0;}
     min-height: 400px;
     padding: 40px;
     background: #000;
-    border: 3px dotted rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -506,7 +642,7 @@ font-variation-settings: "CIRC" 0, "LONG" 0;}
     position: absolute;
     width: 20px;
     height: 20px;
-    background: #000000;
+    background: #ffffff;
     border-radius: 50%;
 }
 
@@ -553,7 +689,7 @@ font-variation-settings: "CIRC" 0, "LONG" 0;}
 }
 
 .font-in-use-track img {
-    height: 650px;
+    height: 680px;
     object-fit: cover;
     transition: transform 0.3s;
     cursor: pointer;
