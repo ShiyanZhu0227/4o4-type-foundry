@@ -1,3 +1,4 @@
+/* FONT PRELOAD */
 @font-face {
 	font-family: "ABCMonumentGrotesk-Regular-Trial";
 	src: url("../fonts/ABCMonumentGrotesk-Regular-Trial.otf");
@@ -20,7 +21,6 @@
 
 /* ———————————————————————————————— */
 * {
-
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -32,202 +32,202 @@ body {
 	background-color: #000000;
 }
 
-
 /* NAVBAR */
 .nav {
-    position: sticky;
-    top: 0;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 5;
+	position: sticky;
+	top: 0;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	flex-wrap: wrap;
+	gap: 10px;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 5;
 }
 
 .nav-title {
-    color: #ffffff;
-    font-size: 130%;
-    text-decoration: none;
-}
-.nav-title:hover { 
-    color: #ccf244;
-    letter-spacing: 1px;
-    transition: 0.3s;
+	color: #ffffff;
+	font-size: 130%;
+	text-decoration: none;
 }
 
-.nav-links { 
-    display: flex; 
-    gap: 10px; 
+.nav-title:hover {
+	color: #ccf244;
+	letter-spacing: 1px;
+	transition: 0.3s;
+}
+
+.nav-links {
+	display: flex;
+	gap: 10px;
 }
 
 .nav-link {
 	background: #000000;
-    color: #ffffff;
-    font-size: 18px;
+	color: #ffffff;
+	font-size: 18px;
 	border: 2px solid #ccf244;
-    border-radius: 30px;
-    padding: 8px 20px;
-    text-decoration: none;
-    letter-spacing: 1px;
-}
-.nav-link:hover {
-    background: #ffffff;
-    color: #000000;
-	border: 2px solid #000000;
-    border-radius: 50%;
-    transition: 0.3s;
+	border-radius: 30px;
+	padding: 8px 20px;
+	text-decoration: none;
+	letter-spacing: 1px;
 }
 
-.bg-title-top {
+.nav-link:hover {
+	background: #ffffff;
+	color: #000000;
+	border: 2px solid #000000;
+	border-radius: 50%;
+	transition: 0.3s;
+}
+
+/* BIG 404 TITLE */
+.bg-title-top{
   position: fixed;
+	left: 50%;
   top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 55vw;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 900;
-  color: white;
   z-index: 1;
-    animation: glitch 1.4s infinite alternate;
+	transform: translate(-50%, -50%);
+	font-size: 55vw;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 900;
+	color: white;
+	animation: glitch 1.4s infinite alternate;
 }
 
 .bg-title-middle {
   position: fixed;
+	left: 50%;
   top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 55vw;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 900;
-  color: white;
   z-index: 2;
-  animation: glitch 1.4s infinite alternate;
+	transform: translate(-50%, -50%);
+	font-size: 55vw;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 900;
+	color: white;
+	animation: glitch 1.4s infinite alternate;
 }
 
 .bg-title-bottom {
-  position: fixed;
+	position: fixed;
+	left: 50%;
   top: 105%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 55vw;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 900;
-  color: white;
+	transform: translate(-50%, -50%);
+	font-size: 55vw;
   z-index: 1;
-  animation: glitch 1.4s infinite alternate;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 900;
+	color: white;
+	animation: glitch 1.4s infinite alternate;
 }
 
+/* GLITCH SHADOW ANIMATION FOR 404*/
 @keyframes glitch {
-  0% {
-    text-shadow:
-      0.01em 0         0 #978EEB,
-     -0.005em -0.003em 0 #ccf244,
-      0.005em 0        0 #0037ff;
-  }
+	0% {
+		text-shadow:
+			0.01em 0 0 #978EEB,
+			-0.005em -0.003em 0 #ccf244,
+			0.005em 0 0 #0037ff;
+	}
 
-  20% {
-    text-shadow:
-      0.015em 0.005em  0 #978EEB,
-     -0.008em -0.004em 0 #ccf244,
-      0.008em 0.004em  0 #0037ff;
-  }
+	20% {
+		text-shadow:
+			0.015em 0.005em 0 #978EEB,
+			-0.008em -0.004em 0 #ccf244,
+			0.008em 0.004em 0 #0037ff;
+	}
 
-  40% {
-    text-shadow:
-     -0.01em -0.004em  0 #978EEB,
-      0.006em 0.003em  0 #ccf244,
-     -0.005em 0.003em  0 #0037ff;
-  }
+	40% {
+		text-shadow:
+			-0.01em -0.004em 0 #978EEB,
+			0.006em 0.003em 0 #ccf244,
+			-0.005em 0.003em 0 #0037ff;
+	}
 
-  60% {
-    text-shadow:
-     -0.015em -0.005em 0 #978EEB,
-      0.008em 0.003em  0 #ccf244,
-      0.01em 0.005em   0 #0037ff;
-  }
+	60% {
+		text-shadow:
+			-0.015em -0.005em 0 #978EEB,
+			0.008em 0.003em 0 #ccf244,
+			0.01em 0.005em 0 #0037ff;
+	}
 
-  80% {
-    text-shadow:
-      0.012em 0.004em  0 #978EEB,
-     -0.006em -0.003em 0 #ccf244,
-      0.006em 0.003em  0 #0037ff;
-  }
+	80% {
+		text-shadow:
+			0.012em 0.004em 0 #978EEB,
+			-0.006em -0.003em 0 #ccf244,
+			0.006em 0.003em 0 #0037ff;
+	}
 
-  100% {
-    text-shadow:
-      0.008em 0        0 #978EEB,
-     -0.004em -0.002em 0 #ccf244,
-      0.004em 0.002em  0 #0037ff;
-  }
+	100% {
+		text-shadow:
+			0.008em 0 0 #978EEB,
+			-0.004em -0.002em 0 #ccf244,
+			0.004em 0.002em 0 #0037ff;
+	}
 }
 
-
-/*  4O4 GLITCH ANIMATION */
-
+/* FALLING TILES AND FONTS */
 .falling {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  z-index: 3;
-  mix-blend-mode: multiply;
+	position: fixed;
+	inset: 0;
+	overflow: hidden;
+	z-index: 3;
+	mix-blend-mode: multiply;
 }
 
 .tile {
-  position: absolute;
-  font-size: 60px;
-  font-weight: 900;
-  width: auto;
-  height: auto;
-  line-height: 1;
-  mix-blend-mode: exclusion;
-  animation: fall 3.5s linear infinite;
-  text-decoration: none;
+	position: absolute;
+	font-weight: 900;
+	line-height: 1;
+	mix-blend-mode: exclusion;
+	animation: fall 3.5s linear infinite;
+	text-decoration: none;
 }
 
-
-/* ================= FONT DISTRIBUTION ================= */
-
-.tile:nth-child(3n+1) {
-  font-family: "Cirkit";
-  font-variation-settings: "XAXI" 30, "YAXI" 60;
-  font-size: 90px;
+/* FONT ASSIGNMENTS */
+.tile:nth-child(3n + 1) {
+	font-family: "Cirkit";
+	font-variation-settings: "XAXI" 30, "YAXI" 60;
+	font-size: 90px;
 }
 
-.tile:nth-child(3n+2) {
-  font-family: "Crimson Veil";
-  font-variation-settings: "SHAP" 40, "POSI" 20;
-  font-size: 90px;
+.tile:nth-child(3n + 2) {
+	font-family: "Crimson Veil";
+	font-variation-settings: "SHAP" 40, "POSI" 20;
+	font-size: 90px;
 }
 
 .tile:nth-child(3n) {
-  font-family: "Connected Slab";
-  font-variation-settings: "wght" 40;
-  font-size: 90px;
+	font-family: "Connected Slab";
+	font-variation-settings: "wght" 40;
+	font-size: 90px;
 }
 
-
-.tile:nth-child(-n+23) {
-  color: #978EEB;
+/* COLOR ASSIGNMENTS */
+.tile:nth-child(-n + 23) {
+	color: #978EEB;
 }
 
-.tile:nth-child(n+24):nth-child(-n+46) {
-  color: #0037ff;
+.tile:nth-child(n + 24):nth-child(-n + 46) {
+	color: #0037ff;
 }
 
-.tile:nth-child(n+47) {
-  color: #ccf244;
+.tile:nth-child(n + 47) {
+	color: #ccf244;
 }
 
-/* ================= ANIMATION ================= */
-
+/* FALLING ANIMATION */
 @keyframes fall {
-  0%   { top: -50px; }
-  100% { top: 110vh; }
+	0% {
+		top: -50px;
+	}
+	100% {
+		top: 110vh;
+	}
 }
 
+/* POSITION */
 .tile:nth-child(1)  { left: 2%;  animation-delay: -0.2s; }
 .tile:nth-child(2)  { left: 8%;  animation-delay: -1.1s; }
 .tile:nth-child(3)  { left: 14%; animation-delay: -2.0s; }
