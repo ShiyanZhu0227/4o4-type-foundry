@@ -8,168 +8,222 @@
 	<!-- CSS code goes in this file -->
 	<link rel="stylesheet" href="../assets/code/specimen.css">
 </head>
+
+
 <body>
 
 	<!-- NAVBAR -->
 	<nav class="nav">
-		<a href="../index.html" class="nav-title">4O4 TYPE FOUNDRY</a>
+		<a href="../index.html" class="nav-title">
+			4O4 TYPE FOUNDRY
+		</a>
+
 		<div class="nav-links">
-			<a href="../assets/fonts/Trial.zip" class="nav-link">DOWNLOAD TRIAL</a>
-			<a href="../FONTS/index.html" class="nav-link">FONTS</a>
-			<a href="../ABOUT/index.html" class="nav-link">ABOUT</a>
+			<a href="../assets/fonts/Trial.zip" class="nav-link">
+				DOWNLOAD TRIAL
+			</a>
+			<a href="../FONTS/index.html" class="nav-link">
+				FONTS
+			</a>
+			<a href="../ABOUT/index.html" class="nav-link">
+				ABOUT
+			</a>
 		</div>
 	</nav>
 
 	<!-- BIG TITLE -->
 	<section class="title" id="intro">
-	Cirkit
+		Cirkit
 	</section>
 
 	<!-- ABOUT SECTION -->
-<section id="about">
-    <div class="section-inner">
-        <div class="about-grid">
+	<section id="about">
+		<div class="section-inner">
+			<div class="about-grid">
 
-            <!-- LEFT COLUMN -->
-            <div class="about-left">
-                <div class="about-left-title">Information</div>
-                <div class="about-left-text">
-Cirkit is a variable font built around playful geometry and elastic motion.
-Its key ideas come from a stretchable stem and a circle module that can shift and reshape themselves, letting the type move and breathe with whatever layout it’s in. Cirkit is rooted in intuitive design and takes cues from the clean pathways of circuit boards, mixed with a bit of Art Deco elegance. It ends up feeling both engineered and expressive, with plenty of personality in between. Thanks to its flexible axes, Cirkit can go from neat and structured to open and energetic, giving designers a fun, responsive tool to play with.
-                </div>
-            </div>
+				<!-- LEFT COLUMN -->
+				<div class="about-left">
+					<div class="about-left-title">
+						Information
+					</div>
 
-            <!-- MIDDLE COLUMN -->
-            <div class="about-middle">
-                <div class="about-right-title">Credits</div>
+					<div class="about-left-text">
+						Cirkit is a variable font built around playful geometry and elastic motion.
+						Its key ideas come from a stretchable stem and a circle module that can shift
+						and reshape themselves, letting the type move and breathe with whatever
+						layout it’s in. Cirkit is rooted in intuitive design and takes cues from the
+						clean pathways of circuit boards, mixed with a bit of Art Deco elegance.
+						It ends up feeling both engineered and expressive, with plenty of personality
+						in between. Thanks to its flexible axes, Cirkit can go from neat and structured
+						to open and energetic, giving designers a fun, responsive tool to play with.
+					</div>
+				</div>
 
-                <div class="credits">
-                    <div>Instructor: Gabriel Drozdov</div>
-                    <div>Design: Shiyan Zhu (Ashley)</div>
-                    <div>Web Development: Shiyan Zhu (Ashley)</div>
-                    <div>RISD Graphic Design 2025 Fall</div>
-                </div>
+				<!-- MIDDLE COLUMN -->
+				<div class="about-middle">
+					<div class="about-middle-title">
+						Credits
+					</div>
 
-                <div class="languages-title">Supported Languages</div>
-                <div class="supported-languages">English</div>
-            </div>
+					<div class="credits">
+						<div>Instructor: Gabriel Drozdov</div>
+						<div>Design: Shiyan Zhu (Ashley)</div>
+						<div>Web Development: Shiyan Zhu (Ashley)</div>
+						<div>RISD Graphic Design 2025 Fall</div>
+					</div>
 
-            <!-- RIGHT COLUMN — DOWNLOAD BUTTON-->
-            <div class="about-right">
-                <a href="../assets/fonts/CirkitVF.ttf" download class="download-btn">
-                    DOWNLOAD
-                </a>
-            </div>
+					<div class="languages-title">
+						Supported Languages
+					</div>
+					<div class="supported-languages">
+						English
+					</div>
+				</div>
 
-        </div>
-    </div>
-</section>
+				<!-- RIGHT COLUMN -->
+				<div class="about-right">
+					<a
+						href="../assets/fonts/CirkitVF.ttf"
+						download
+						class="download-button"
+					>
+						DOWNLOAD
+					</a>
+				</div>
 
-<section class="type-style-grid section-inner">
+			</div>
+		</div>
+	</section>
 
-	<!-- LEFT COLUMN — FONT SIZE -->
-    <div class="type-style-block">
+<!-- TYPE TESTER SECTION -->
+<section class="type-tester section-inner">
 
-        <div class="slider-block">
-           <label>
-        Size: <span id="current-font-size">110</span> px
-    </label>
-            <input
-                type="range"
-                value="96"
-                min="40"
-                max="200"
-                oninput="setFontSize(this.value);">
-        </div>
+	<!-- FONT SIZE SLIDER -->
+	<div class="type-tester-control">
+		<div class="slider-control">
+			<label>
+				Size:
+				<span id="current-font-size">110</span> px
+			</label>
 
-        <p id="font-size-preview" class="style-preview" contenteditable="plaintext-only">
-          TYPE AND CODE!
-        </p>
+			<input
+				type="range"
+				value="96"
+				min="40"
+				max="200"
+				oninput="setFontSize(this.value);"
+			>
+		</div>
 
-    </div>
-
-    <!-- RIGHT COLUMN — LETTER SPACING -->
-    <div class="type-style-block">
-
-        <div class="slider-block">
-              <label>
-Letter Spacing: <span id="current-letter-spacing">0</span> px</label>
-            <input
-                type="range"
-                value="0"
-                min="0"
-                max="30"
-                oninput="setLetterSpacing(this.value);">
-        </div>
-
-        <p id="tracking-preview" class="style-preview" contenteditable="plaintext-only">
-          FINAL YAYYY!
-        </p>
-
-    </div>
-
-</section>
-
-
-
-	<!-- SLIDERS -->
-	<div class="slider-area section-inner">
-
-		<label>Circle</label>
-		<input type="range" value="0" min="0" max="100" oninput="changeCircle(this.value);">
-
-		<label>Elongation</label>
-		<input type="range" value="0" min="0" max="100" oninput="changeElongation(this.value);">
-
-		<label>Line Height</label>
-		<input type="range" value="0" min="0" max="10" oninput="changeLineHeight(this.value);">
-
+		<p
+			id="font-size-preview"
+			class="type-tester-preview"
+			contenteditable="plaintext-only"
+		>
+			TYPE AND CODE!
+		</p>
 	</div>
 
-	<!-- TEXT PREVIEW -->
-	<div id="text" class="section-inner" contenteditable="plaintext-only">
-		The quick brown fox jumps over the lazy dog.
+	<!-- LETTER SPACING SLIDER -->
+	<div class="type-tester-control">
+		<div class="slider-control">
+			<label>
+				Letter Spacing:
+				<span id="current-letter-spacing">0</span> px
+			</label>
+
+			<input
+				type="range"
+				value="0"
+				min="0"
+				max="30"
+				oninput="setLetterSpacing(this.value);"
+			>
+		</div>
+
+		<p
+			id="tracking-preview"
+			class="type-tester-preview"
+			contenteditable="plaintext-only"
+		>
+			FINAL YAYYY!
+		</p>
 	</div>
 
+</section>
 
-<div class="animation-section">
+<!-- VARIATION SLIDER -->
+<div class="variation-control section-inner">
 
-    <!-- LEFT -->
-    <div class="animation-frame">
-        <div class="corner tl"></div>
-        <div class="corner tr"></div>
-        <div class="corner bl"></div>
-        <div class="corner br"></div>
+	<label>Circle</label>
+	<input
+		type="range"
+		value="0"
+		min="0"
+		max="100"
+		oninput="changeCircle(this.value);"
+	>
 
-        <div class="animation-section-left">
-            Graphic Design Is ♟My♟ Passion
-        </div>
-    </div>
+	<label>Elongation</label>
+	<input
+		type="range"
+		value="0"
+		min="0"
+		max="100"
+		oninput="changeElongation(this.value);"
+	>
 
-    <!-- RIGHT -->
-    <div class="animation-frame">
-        <div class="corner tl"></div>
-        <div class="corner tr"></div>
-        <div class="corner bl"></div>
-        <div class="corner br"></div>
-
-        <div class="animation-section-right">
-            Graphic Design Is ♟My♟ Passion
-        </div>
-    </div>
-
+	<label>Line Height</label>
+	<input
+		type="range"
+		value="0"
+		min="0"
+		max="10"
+		oninput="changeLineHeight(this.value);"
+	>
 </div>
 
+<!-- VARIATION PREVIEW (JS TARGET FIXED) -->
+<div
+	id="variation-preview"
+	class="variation-preview section-inner"
+	contenteditable="plaintext-only"
+>
+	The quick brown fox jumps over the lazy dog.
+</div>
 
+	<!-- ANIMATION SECTIONS -->
+	<div class="animation-section">
 
+		<div class="animation-frame">
+			<div class="corner tl"></div>
+			<div class="corner tr"></div>
+			<div class="corner bl"></div>
+			<div class="corner br"></div>
 
-	<!-- CHARACTERS SECTION -->
+			<div class="animation-section-left">
+				Graphic Design Is ♟My♟ Passion
+			</div>
+		</div>
+
+		<div class="animation-frame">
+			<div class="corner tl"></div>
+			<div class="corner tr"></div>
+			<div class="corner bl"></div>
+			<div class="corner br"></div>
+
+			<div class="animation-section-right">
+				Graphic Design Is ♟My♟ Passion
+			</div>
+		</div>
+
+	</div>
+
+	<!-- CHARACTERS/KEYBOARD SECTION -->
 	<div class="characters-wrapper">
 		<div class="section-inner">
-
 			<div class="container">
 
-				<!-- KEYBOARD BUTTON GRID -->
 				<div class="letters">
 					<div onmouseenter="changeLetter('A')">A</div>
 					<div onmouseenter="changeLetter('B')">B</div>
@@ -209,7 +263,6 @@ Letter Spacing: <span id="current-letter-spacing">0</span> px</label>
 					<div onmouseenter="changeLetter('9')">9</div>
 				</div>
 
-				<!-- TESTER FRAME -->
 				<div class="tester-frame">
 					<div class="corner tl"></div>
 					<div class="corner tr"></div>
@@ -222,51 +275,40 @@ Letter Spacing: <span id="current-letter-spacing">0</span> px</label>
 		</div>
 	</div>
 
-<section class="edit-box-section">
-    <div class="section-inner">
+	<!-- EDITABLE BOX -->
+	<section class="edit-box-section">
+		<div class="section-inner">
+			<div class="edit-frame">
+				<div class="corner tl"></div>
+				<div class="corner tr"></div>
+				<div class="corner bl"></div>
+				<div class="corner br"></div>
 
-        <div class="edit-frame">
-            <!-- corner circles -->
-            <div class="corner tl"></div>
-            <div class="corner tr"></div>
-            <div class="corner bl"></div>
-            <div class="corner br"></div>
-
-            <!-- editable text -->
-            <div id="edit-box" contenteditable="plaintext-only">
+				<div id="edit-box" contenteditable="plaintext-only">
 A B C D E F G H I J
 K L M N O P Q R S T
 U V W X Y Z
 0 1 2 3 4 5 6 7 8 9
 . , : ; ! ? ( )
+				</div>
+			</div>
+		</div>
+	</section>
 
-</div>
-        </div>
-
-    </div>
-</section>
-
-
-
-
-<section id="font-in-use">
-    <div class="section-inner">
-
-
-        <div class="font-in-use-scroller">
-            <div class="font-in-use-track">
-
-                <img src="font-in-use/motion.mp4" alt="Font in Use 1">
-                <img src="font-in-use/poster1.jpg" alt="Font in Use 2">
-                <img src="font-in-use/poster2.jpg" alt="Font in Use 3">
-                <img src="font-in-use/poster3.jpg" alt="Font in Use 4">
-                <img src="font-in-use/poster4.jpg" alt="Font in Use 5">
-
-            </div>
-        </div>
-
-    </div>
-</section>
+	<!-- FONT IN USE -->
+	<section id="font-in-use">
+		<div class="section-inner">
+			<div class="font-in-use-scroller">
+				<div class="font-in-use-track">
+					<img src="font-in-use/motion.mp4" alt="Font in Use 1">
+					<img src="font-in-use/poster1.jpg" alt="Font in Use 2">
+					<img src="font-in-use/poster2.jpg" alt="Font in Use 3">
+					<img src="font-in-use/poster3.jpg" alt="Font in Use 4">
+					<img src="font-in-use/poster4.jpg" alt="Font in Use 5">
+				</div>
+			</div>
+		</div>
+	</section>
 
 
 	<!-- JavaScript code goes in this file -->

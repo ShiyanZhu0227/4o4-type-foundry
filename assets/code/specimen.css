@@ -20,6 +20,7 @@ body {
     scroll-behavior: smooth;
 }
 
+/* This is just to have a unified padding throughout all sections */
 .section-inner {
     padding-left: 60px;
     padding-right: 60px;
@@ -94,7 +95,6 @@ body {
     letter-spacing: -0.01em;
 }
 
-
 /* ABOUT SECTION */
 #about {
     padding-top: 100px;
@@ -127,7 +127,7 @@ body {
     color: #000;
 }
 
-.about-right-title {
+.about-middle-title {
     font-size: 30px;
     margin-bottom: 20px;
 }
@@ -156,7 +156,7 @@ body {
     align-items: flex-start;
 }
 
-.download-btn {
+.download-button {
     margin-top: 0;
     background: #000;
     color: #ccf244;
@@ -168,7 +168,7 @@ body {
     letter-spacing: 1px;
 }
 
-.download-btn:hover {
+.download-button:hover {
     background: #fff;
     color: #000;
     border-radius: 50%;
@@ -188,27 +188,20 @@ body {
     }
 }
 
-
-/* TYPE SLIDER SECTION 1-FONTSIZE,LETTERSPACING */
-
-.type-style-grid {
+/* TYPE TESTER/SLIDER */
+.type-tester {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: start;
     background-color: black;
-} 
+}
 
-.type-style-block {
+.type-tester-control {
     padding-top: 100px;
-    background: black;
 }
 
-.style-title {
-    font-size: 26px;
-    color: #ccf244;
-}
-.style-preview {
+.type-tester-preview {
     font-family: "Cirkit";
     font-variation-settings: "CIRC" 0, "LONG" 0;
     font-size: 110px;
@@ -216,35 +209,26 @@ body {
     line-height: 1.1;
     margin-top: 60px;
     color: #ccf244;
-    
-}
-.new-slider-area {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 40px;
-    color: #ccf244;
 }
 
-.slider-block label {
-    display: inline-block;
-    margin-bottom: 0;
-    margin-right: 12px;
-    color: #ccf244;
-}
-
-.slider-block input[type="range"] {
-    width: 180px;
+/* Slider Style */
+input[type="range"] {
     -webkit-appearance: none;
+    appearance: none;
+    width: 180px;
+    height: 20px;
     background: transparent;
-    color: #ccf244;
+    cursor: pointer;
 }
 
-.slider-block input[type="range"]::-webkit-slider-runnable-track {
+/* track */
+input[type="range"]::-webkit-slider-runnable-track {
     height: 2px;
     background-color: #ccf244;
 }
 
-.slider-block input[type="range"]::-webkit-slider-thumb {
+/* thumb */
+input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 10px;
     height: 10px;
@@ -253,112 +237,64 @@ body {
     margin-top: -4px;
 }
 
-#new-text-preview {
-    font-family: "Cirkit";
-    font-size: 110px;
-    letter-spacing: 0px;
-    line-height: 1.1;
-    margin-top: 20px;
+.slider-control label {
+    display: inline-block;
+    margin-right: 12px;
     color: #ccf244;
 }
 
-/* TYPE SLIDER SECTION 2-CIRCLE,ELONGATION */
-.slider-area {
-    margin-top: 0;
+/* Variation slider */
+.variation-control {
     display: flex;
     align-items: center;
     gap: 20px;
     background-color: black;
 }
 
-.slider-area label { font-size: 18px; color: #ccf244;}
-
-input[type="range"] {
-    -webkit-appearance: none;
-    width: 150px;
-    background: transparent;
+.variation-control label {
+    font-size: 18px;
+    color: #ccf244;
 }
 
-/* Track */
-input[type="range"]::-webkit-slider-runnable-track {
-    height: 2px;
-    background: #ccf244;
-}
-
-/* Thumb */
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 10px;
-    height: 10px;
-    background: #ccf244;
-    border-radius: 50%;
-    margin-top: -4px;
-}
-
-/* Text Output */
-#text {
+.variation-preview {
     padding-top: 60px;
     padding-bottom: 80px;
     font-family: "Cirkit";
     font-size: 110px;
+    line-height: 1.1;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-wrap: wrap;
+    justify-content: flex-start;
     background-color: black;
     color: #ccf244;
 }
 
-@media (max-width: 900px) {
 
-    /* reduce space between columns / blocks */
-    .type-style-grid {
+@media (max-width: 900px) {
+    .type-tester {
         gap: 40px;
     }
 
-    /* reduce top spacing per section */
-    .type-style-block {
+    .type-tester-control {
         padding-top: 60px;
     }
 
-    /* tighter spacing under sliders */
-    .new-slider-area {
-        margin-bottom: 24px;
-    }
-
-    /* tighten preview spacing */
-    .style-preview {
+    .type-tester-preview {
         margin-top: 40px;
-    }
-
-    #text {
-        padding-top: 40px;
-        padding-bottom: 60px;
     }
 }
 
 @media (max-width: 600px) {
-
-    .type-style-grid {
+    .type-tester {
         grid-template-columns: 1fr;
         gap: 32px;
     }
-    .type-style-block {
+
+    .type-tester-control {
         padding-top: 40px;
     }
 
-    .new-slider-area {
-        margin-bottom: 20px;
-        gap: 20px;
-    }
-
-    .style-preview {
+    .type-tester-preview {
         margin-top: 32px;
-    }
-
-    #text {
-        padding-top: 32px;
-        padding-bottom: 48px;
     }
 }
 
@@ -367,16 +303,13 @@ input[type="range"]::-webkit-slider-thumb {
 .animation-section {
     padding: 80px;
     background-color: #ccf244;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-
-    /* critical: prevent overflow during resize */
     overflow: hidden;
 }
 
-/* frame */
+/* frame style, learnt from Tiger Dingsun's site */
 .animation-frame {
     position: relative;
     border: 3px solid #000;
@@ -390,47 +323,41 @@ input[type="range"]::-webkit-slider-thumb {
     background: #000;
     border-radius: 50%;
 }
-
+/* just make this easier to check, ignore the indent and format here */
 .animation-frame .corner.tl { top: -11px; left: -11px; }
 .animation-frame .corner.tr { top: -11px; right: -11px; }
 .animation-frame .corner.bl { bottom: -11px; left: -11px; }
 .animation-frame .corner.br { bottom: -11px; right: -11px; }
 
-/* LEFT */
+/* animation left */
 .animation-section-left {
     width: 100%;
     padding: 30px;
-
     font-family: "Cirkit";
     font-size: 100px;
     font-variation-settings: "CIRC" 0, "LONG" 0;
-
     background-color: #000;
     color: #ccf244;
     line-height: 1.6;
     text-align: center;
-
     animation: animation-left 4s infinite alternate;
 }
 
-/* RIGHT */
+/* animation right */
 .animation-section-right {
     width: 100%;
     padding: 30px;
-
     font-family: "Cirkit";
     font-size: 100px;
     font-variation-settings: "CIRC" 100, "LONG" 100;
-
     background-color: #ccf244;
     color: #000;
     line-height: 1.6;
     text-align: center;
-
     animation: animation-right 4s infinite alternate;
 }
 
-/* animations */
+/* animation movement */
 @keyframes animation-left {
     0%   { font-variation-settings: "CIRC" 0,   "LONG" 0; }
     50%  { font-variation-settings: "CIRC" 50,  "LONG" 50; }
@@ -443,9 +370,8 @@ input[type="range"]::-webkit-slider-thumb {
     100% { font-variation-settings: "CIRC" 0,   "LONG" 0; }
 }
 
-/* ================= TABLET ================= */
+/* RESPONSIVE */
 @media (max-width: 900px) {
-
     .animation-section {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -463,7 +389,6 @@ font-size: 80px;
 
 
 @media (max-width: 600px) {
-
     .animation-section {
         grid-template-columns: 1fr;
         gap: 32px;
@@ -488,7 +413,7 @@ font-size: 80px;
 }
 
 
-/* ================= CHARACTER KEYBOARD SECTION ================= */
+/* CHARACTER KEYBOARD SECTION */
 
 .characters-wrapper {
     background: #000;
@@ -509,8 +434,7 @@ font-size: 80px;
     gap: 100px;
 }
 
-/* ================= KEYBOARD ================= */
-
+/* keyboard */
 .letters {
     display: grid;
     grid-template-columns: repeat(6, auto);
@@ -540,7 +464,7 @@ font-size: 80px;
     transform: translateY(-2px);
 }
 
-/* ================= TESTER FRAME ================= */
+/* tester frame */
 
 .tester-frame {
     position: relative;
@@ -579,6 +503,7 @@ font-size: 80px;
     align-items: center;
 }
 
+/* RESPONSIVE */
 @media (max-width: 900px) {
     .container {
         gap: 60px;

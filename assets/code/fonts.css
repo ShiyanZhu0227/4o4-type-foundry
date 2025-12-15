@@ -18,7 +18,7 @@
 	src: url("../fonts/CirkitVF.ttf");
 }
 
-/* --------------------- */
+/* ———————————————————————————————— */
 * {
 
 	box-sizing: border-box;
@@ -149,7 +149,7 @@ body {
 }
 
 .section-connected-slab-text:hover {
-	font-variation-settings: "wght" 100;
+	font-variation-settings: "wght" 200;
 }
 
 /* SECTION LINKS */
